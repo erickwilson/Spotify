@@ -1,0 +1,177 @@
+/*
+*
+* @author Erick Wilson
+*
+*/
+
+
+/* ===================================== layout ===========================================*/
+
+html,body, .capa{
+	height: 100%;
+}
+
+body{
+	background: url('imagens/capa.png'),
+				url('imagens/ruido.png'),/* sobrepondo imagens no background*/
+				linear-gradient(50deg,#ff4169,#7c26f8); /* 50deg - degrees - graus */
+	background-attachment: fixed;
+	font-family: Helvetica, Arial, sans-serif;
+	overflow-x: hidden; /* removendo a barra de navegação horizontal */
+}
+
+/* -- Barra de navegação -- */
+.img-logo{
+	height: 40px;
+	width: 132px;
+	display: block;
+	background: url('imagens/spotify.svg') no-repeat; /* no-repeat - não deixa a imagem repetir */
+	background-size: contain; /* contain - define que a imagem de fundo tera o mesmo tamanho que o definido na classe*/
+	color: transparent;
+}
+
+nav.navbar-transparente{
+	padding: 15px 0px;
+	background: rgba(0, 0, 0, 0.6); /* opacidade */
+	border: none;
+}
+
+.navbar-brand{
+	padding: 5px 15px;
+}
+
+.divisor{
+	height: 16px;
+	width: 1px;
+	background: white;
+	margin: 16px 10px; /* 16px superior e inferior e 10px lateral*/
+}
+
+.navbar-inverse .navbar-nav>li>a, #rodape .nav a{ /* > seletor filho, coloca o estilo dentro do <a> que é filho do <li> */
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, #rodape .nav a:hover{ /* ao passar o mouse muda a cor da fonte */
+	color: #9bf0e1;
+	background: none; /* tira o fundo branco ao passar o mouse*/	
+}
+
+/* -- Imagem de capa -- */
+
+.capa {	
+	display: table;   /* centralizando verticalmente*/
+	width: 100%;	/* centralizando verticalmente*/
+}
+
+.texto-capa{
+	text-align: center;
+	color: white;
+	display: table-cell;    /* centralizando verticalmente*/
+	vertical-align: middle;  /* centralizando verticalmente*/
+}
+
+/* -- Botoes -- */
+
+.btn-custom {
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;  /* compatibilidade com outros browsers*/
+	-moz-border-radius: 500px;	/* compatibilidade com outros browsers*/
+	padding: 10px 35px;
+	margin: 0px 15px;
+	text-transform: uppercase;	/* deixando as letras maiusculas*/
+	transition: background 0.4s, color 0.4s; /* criando a transição do background e da cor*/
+}
+
+.btn-roxo{
+	background: #7c25f8;
+}
+
+.btn-roxo:hover {
+	background-color: #6207e3;	
+	color: white;
+}
+
+.btn-branco{
+	background: transparent;
+	border: 2px solid white;
+}
+
+.btn-branco:hover {
+	background-color: white;	
+	color: black;
+}
+
+/* -- Seção serviço -- */
+
+#servicos{
+	background: white;
+	padding: 20px;
+	padding-bottom: 20px;
+}
+
+.albuns{
+	padding: 10px 0px 10px 0px; /* espaçamento entre as imagens*/
+}
+
+/* -- Recursos -- */
+
+#recursos{	
+	padding: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+.rotacionar{
+	transform: rotate(30deg);	/*rotacionando a imagem em 30 graus*/	
+	-ms-transform: rotate(30deg); /* IE 9*/
+	-webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */	
+	padding-left: 80px;
+}
+
+/* -- rodape -- */
+
+footer{
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative; /* coloca o rodape por cima da imagem*/
+}
+
+.item-rede-social{
+	float: right;
+}
+
+/* ===================================== Tipografia ===========================================*/
+
+h1{
+	font-size: 100px;
+	font-weight: 900;
+	letter-spacing: -0.05em; /* diminui o espaçamento entre as letras*/
+	margin-bottom: 50px;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 700px;
+	letter-spacing: -0.04em;
+}
+
+h3{
+	font-size: 50px;
+	font-weight: 700px;
+	letter-spacing: -0.04em;
+}
+
+#rodape h4{
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+#servicos h2, #servicos h3{
+	color: #7c25f8;	
+}
+
+#recursos h3{
+	color: #9bf0e1;	
+}
